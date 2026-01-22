@@ -1,0 +1,61 @@
+module commonInfo {
+  module msg {
+    module dds_ {
+      @final
+      struct commonCamera_224 {
+        octet image[150528];
+      };
+      @final
+      struct commonCamera_640480 {
+        octet image[921600];
+      };
+      @final
+      struct float_7d {
+        float data[7];
+      };
+      @final
+      struct uint_7d {
+        float data[7];
+      };
+      @final
+      struct uint_1d {
+        octet data[1];
+      };
+      @final
+      struct float_1d {
+        float data[1];
+      };
+      @final
+      struct uint_100d {
+        octet data[100];
+      };
+      @final
+      struct roboticArm_double_control_info {
+        float_7d left_arm_joint_delta;
+        float_7d right_arm_joint_delta;
+        uint_1d  left_gripper_action;
+        uint_1d  right_gripper_action;
+      };
+      @final
+      struct roboticArm_double_state_info {
+        float_7d left_arm_q;
+        float_7d right_arm_q;
+        float_1d  left_gripper;
+        float_1d  right_gripper;
+      };
+      @final
+      struct roboticArm_double_all_state_info {
+        float_7d left_arm_q;
+        float_7d right_arm_q;
+        float_7d left_arm_dq;
+        float_7d right_arm_dq;
+        float_7d left_arm_tau;
+        float_7d right_arm_tau;
+        float_1d  left_gripper;
+        float_1d  right_gripper;
+        float_1d  left_gripper_vel;
+        float_1d  right_gripper_vel;
+      };
+    };
+  };
+};
