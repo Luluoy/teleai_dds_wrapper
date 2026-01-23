@@ -97,7 +97,7 @@ class TeleaiCommonSub_1(object):
             nano_sleep(duration(seconds=0.1))
         nano_sleep(duration(seconds=0.1))
 
-class TeleaiCommonSub_1_2(object):
+class TeleaiCommonSub_1q(object):
     def __init__(self, domain_id:int, topic:str, struct_type:idl.IdlStruct, qos:Qos=None):
         if not qos:
             qos = Qos(
