@@ -1,11 +1,8 @@
-from pathlib import Path
+import os
+import time
 
-from .logging_utils import logger
+def get_nano():
+    return time.clock_gettime_ns(time.CLOCK_REALTIME)
 
-PACKAGE_ROOT = Path(__file__).parent.resolve()
-IOX_CONFIG_PATH = PACKAGE_ROOT / "assets" / "shm_config.toml"
-CYCLONEDDS_XML_PATH = PACKAGE_ROOT / "assets" / "cyclonedds.xml"
-IOX_ROUDI_BIN = PACKAGE_ROOT / "bin" / "iox-roudi"
-
-def get_cyclonedds_uri():
-    return f"file://{CYCLONEDDS_XML_PATH}"
+def nano_sleep(ns):
+    os.clock_nanosleep(time.CLOCK_MONOTONIC, 0, ns)

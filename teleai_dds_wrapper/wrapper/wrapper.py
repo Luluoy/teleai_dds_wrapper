@@ -5,8 +5,10 @@ from cyclonedds.sub import DataReader
 from cyclonedds.qos import Qos, Policy
 from cyclonedds.util import duration
 import cyclonedds.idl as idl
-import time
+from utils import get_nano, nano_sleep
+
 import threading
+from collections import deque
 
 from teleai_dds_wrapper.utils import logger
 
@@ -16,7 +18,7 @@ class TeleaiCommonPub_1(object):
             qos = Qos(
                 Policy.Reliability.Reliable(max_blocking_time=duration(milliseconds=0)),
                 Policy.Durability.Volatile,
-                Policy.History.KeepLast(3),
+                Policy.History.KeepLast(1),
                 Policy.Deadline(duration(seconds=3600*24))
             )
         self._topic = topic
@@ -43,7 +45,7 @@ class TeleaiCommonSub_1(object):
             qos = Qos(
                 Policy.Reliability.Reliable(max_blocking_time=duration(milliseconds=0)),
                 Policy.Durability.Volatile,
-                Policy.History.KeepLast(3),
+                Policy.History.KeepLast(1),
                 Policy.Deadline(duration(seconds=3600*24))
             )
         self._topic = topic
@@ -59,8 +61,8 @@ class TeleaiCommonSub_1(object):
         self._read_cmd_thread.daemon = True
         self._read_cmd_thread.start()
         
-        self.last_recv_time = 0.
-        self.timeout_ms = 1000.
+        self.last_recv_time:int = 0
+        self.timeout_nano = duration(milliseconds=1000)
         logger.info(f"Sub for {topic} start.")
 
     def read(self)->idl.IdlStruct | None:
@@ -79,10 +81,10 @@ class TeleaiCommonSub_1(object):
                 self.pre_communication()
                 self.msg = msg
                 self.post_communication()
-            time.sleep(0.001)
+            nano_sleep(duration(microseconds=100))
   
     def isTimeout(self) -> bool:
-        return time.time_ns() - self.last_recv_time/1e6 > self.timeout_ms / 1000.
+        return (get_nano() - self.last_recv_time) > self.timeout_nano
     
     def post_communication(self):
         pass
@@ -92,5 +94,61 @@ class TeleaiCommonSub_1(object):
 
     def wait_for_connection(self):
         while self.msg is None:
-            time.sleep(0.1)
-        time.sleep(0.1)
+            nano_sleep(duration(seconds=0.1))
+        nano_sleep(duration(seconds=0.1))
+
+class TeleaiCommonSub_1_2(object):
+    def __init__(self, domain_id:int, topic:str, struct_type:idl.IdlStruct, qos:Qos=None):
+        if not qos:
+            qos = Qos(
+                Policy.Reliability.Reliable(max_blocking_time=duration(milliseconds=0)),
+                Policy.Durability.Volatile,
+                Policy.History.KeepLast(1),
+                Policy.Deadline(duration(seconds=3600*24))
+            )
+        self._topic = topic
+        self._struct_type = struct_type
+        self._dp = DomainParticipant(domain_id)
+        self._tp = Topic(self._dp, topic, struct_type)
+        self._dr = DataReader(self._dp, self._tp, qos)
+
+        self.msg = None
+
+        self.q = deque()
+        self._read_cmd_thread = threading.Thread(target=self._listen_cmd)
+        self._read_cmd_thread.daemon = True
+        self._read_cmd_thread.start()
+        
+        self.last_recv_time:int = 0
+        self.timeout_nano = duration(milliseconds=1000)
+        logger.info(f"Sub for {topic} start.")
+
+    def read(self)->idl.IdlStruct | None:
+        self.q.pop_left() if self.q else None
+    
+    def _listen_cmd(self):
+        for sample in self._dr.take_iter():
+            info = getattr(sample, "sample_info", None)
+            if info is not None and not info.valid_data:
+                continue
+            msg = getattr(sample, "data", sample)
+
+            self.last_recv_time = info.source_timestamp
+            self.pre_communication()
+            self.q.append(msg)
+            self.post_communication()
+            nano_sleep(duration(milliseconds=1))
+  
+    def isTimeout(self) -> bool:
+        return (get_nano() - self.last_recv_time) > self.timeout_nano
+    
+    def post_communication(self):
+        pass
+
+    def pre_communication(self):
+        pass
+
+    def wait_for_connection(self):
+        while self.msg is None:
+            nano_sleep(duration(seconds=0.1))
+        nano_sleep(duration(seconds=0.1))
