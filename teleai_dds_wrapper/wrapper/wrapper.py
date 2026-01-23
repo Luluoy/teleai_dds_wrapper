@@ -5,7 +5,7 @@ from cyclonedds.sub import DataReader
 from cyclonedds.qos import Qos, Policy
 from cyclonedds.util import duration
 import cyclonedds.idl as idl
-from utils import get_nano, nano_sleep
+from teleai_dds_wrapper.utils import get_nano, nano_sleep
 
 import threading
 from collections import deque
