@@ -80,51 +80,51 @@ class process_state(idl.IdlStruct, typename="commonInfo.msg.dds_.process_state")
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_single_control_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_single_control_info"):
-    arm_joint_q: 'commonInfo.msg.dds_.float_7d'
-    gripper_action: 'commonInfo.msg.dds_.uint_1d'
+    arm_joint_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    gripper_action: 'teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d'
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_single_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_single_state_info"):
-    arm_joint_q: 'commonInfo.msg.dds_.float_7d'
-    gripper_state: 'commonInfo.msg.dds_.float_1d'
+    arm_joint_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    gripper_state: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_control_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_control_info"):
-    left_arm_q: 'commonInfo.msg.dds_.float_7d'
-    right_arm_q: 'commonInfo.msg.dds_.float_7d'
-    left_gripper_action: 'commonInfo.msg.dds_.uint_1d'
-    right_gripper_action: 'commonInfo.msg.dds_.uint_1d'
+    left_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    right_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    left_gripper_action: 'teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d'
+    right_gripper_action: 'teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d'
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_state_info"):
-    left_arm_q: 'commonInfo.msg.dds_.float_7d'
-    right_arm_q: 'commonInfo.msg.dds_.float_7d'
-    left_gripper: 'commonInfo.msg.dds_.float_1d'
-    right_gripper: 'commonInfo.msg.dds_.float_1d'
+    left_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    right_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    left_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    right_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_all_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_all_state_info"):
-    left_arm_q: 'commonInfo.msg.dds_.float_7d'
-    right_arm_q: 'commonInfo.msg.dds_.float_7d'
-    left_arm_dq: 'commonInfo.msg.dds_.float_7d'
-    right_arm_dq: 'commonInfo.msg.dds_.float_7d'
-    left_arm_tau: 'commonInfo.msg.dds_.float_7d'
-    right_arm_tau: 'commonInfo.msg.dds_.float_7d'
-    left_gripper: 'commonInfo.msg.dds_.float_1d'
-    right_gripper: 'commonInfo.msg.dds_.float_1d'
-    left_gripper_vel: 'commonInfo.msg.dds_.float_1d'
-    right_gripper_vel: 'commonInfo.msg.dds_.float_1d'
+    left_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    right_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    left_arm_dq: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    right_arm_dq: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    left_arm_tau: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    right_arm_tau: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
+    left_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    right_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    left_gripper_vel: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    right_gripper_vel: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
 
 
