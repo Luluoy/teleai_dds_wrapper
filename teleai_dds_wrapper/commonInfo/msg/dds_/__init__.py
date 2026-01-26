@@ -5,15 +5,18 @@
 
 """
 
-from ._commoninfo import commonCamera_224, commonCamera_640480, float_1d, float_7d, roboticArm_double_all_state_info, roboticArm_double_control_info, roboticArm_double_state_info, uint_100d, uint_1d, uint_7d
+from ._commoninfo import commonCamera_224, commonCamera_640480, float_1d, float_7d, process_state, roboticArm_double_all_state_info, roboticArm_double_control_info, roboticArm_double_state_info, roboticArm_single_control_info, roboticArm_single_state_info, uint_100d, uint_1d, uint_7d
 __all__ = [
 	"commonCamera_224",
 	"commonCamera_640480",
 	"float_1d",
 	"float_7d",
+	"process_state",
 	"roboticArm_double_all_state_info",
 	"roboticArm_double_control_info",
 	"roboticArm_double_state_info",
+	"roboticArm_single_control_info",
+	"roboticArm_single_state_info",
 	"uint_100d",
 	"uint_1d",
 	"uint_7d",

@@ -30,6 +30,21 @@ module commonInfo {
         octet data[100];
       };
       @final
+      struct process_state {
+        @key string name;
+        octet state;
+      };
+      @final
+      struct roboticArm_single_control_info {
+        float_7d arm_joint_delta;
+        uint_1d  gripper_action;
+      };
+      @final
+      struct roboticArm_single_state_info {
+        float_7d arm_joint_q;
+        float_1d  gripper_state;
+      };
+      @final
       struct roboticArm_double_control_info {
         float_7d left_arm_joint_delta;
         float_7d right_arm_joint_delta;
