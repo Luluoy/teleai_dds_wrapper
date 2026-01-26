@@ -1,9 +1,6 @@
 from . import commonInfo
 from ._bootstrap import _check_and_start_roudi
-<<<<<<< HEAD
-=======
 from .wrapper.wrapper import TeleaiCommonPub_1, TeleaiCommonSub_1, TeleaiCommonSub_1q
->>>>>>> 36f58be (readme)
 from pathlib import Path
 
 package_root = Path(__file__).parent.resolve()
