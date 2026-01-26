@@ -15,7 +15,7 @@ import cyclonedds.idl.annotations as annotate
 import cyclonedds.idl.types as types
 
 # root module import for resolving types
-import commonInfo
+import teleai_dds_wrapper.commonInfo
 
 
 @dataclass
