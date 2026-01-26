@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+README.md
+>>>>>>> 36f58be (readme)
 pyproject.toml
 teleai_dds_wrapper/__init__.py
 teleai_dds_wrapper/_bootstrap.py

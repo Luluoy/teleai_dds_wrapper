@@ -18,7 +18,11 @@ class TeleaiCommonPub_1(object):
             qos = Qos(
                 Policy.Reliability.Reliable(max_blocking_time=duration(milliseconds=0)),
                 Policy.Durability.Volatile,
+<<<<<<< HEAD
                 Policy.History.KeepLast(1),
+=======
+                Policy.History.KeepLast(3),
+>>>>>>> 36f58be (readme)
                 Policy.Deadline(duration(seconds=3600*24))
             )
         self._topic = topic
@@ -45,7 +49,11 @@ class TeleaiCommonSub_1(object):
             qos = Qos(
                 Policy.Reliability.Reliable(max_blocking_time=duration(milliseconds=0)),
                 Policy.Durability.Volatile,
+<<<<<<< HEAD
                 Policy.History.KeepLast(1),
+=======
+                Policy.History.KeepLast(3),
+>>>>>>> 36f58be (readme)
                 Policy.Deadline(duration(seconds=3600*24))
             )
         self._topic = topic
@@ -103,7 +111,11 @@ class TeleaiCommonSub_1q(object):
             qos = Qos(
                 Policy.Reliability.Reliable(max_blocking_time=duration(milliseconds=0)),
                 Policy.Durability.Volatile,
+<<<<<<< HEAD
                 Policy.History.KeepLast(1),
+=======
+                Policy.History.KeepLast(3),
+>>>>>>> 36f58be (readme)
                 Policy.Deadline(duration(seconds=3600*24))
             )
         self._topic = topic
@@ -112,9 +124,13 @@ class TeleaiCommonSub_1q(object):
         self._tp = Topic(self._dp, topic, struct_type)
         self._dr = DataReader(self._dp, self._tp, qos)
 
+<<<<<<< HEAD
         self.msg = None
 
         self.q = deque()
+=======
+        self.q = deque(maxlen=1)
+>>>>>>> 36f58be (readme)
         self._read_cmd_thread = threading.Thread(target=self._listen_cmd)
         self._read_cmd_thread.daemon = True
         self._read_cmd_thread.start()
@@ -124,7 +140,14 @@ class TeleaiCommonSub_1q(object):
         logger.info(f"Sub for {topic} start.")
 
     def read(self)->idl.IdlStruct | None:
+<<<<<<< HEAD
         self.q.pop_left() if self.q else None
+=======
+        if self.q:
+            return self.q.pop_left()  
+        else: 
+            return None
+>>>>>>> 36f58be (readme)
     
     def _listen_cmd(self):
         for sample in self._dr.take_iter():
@@ -149,6 +172,13 @@ class TeleaiCommonSub_1q(object):
         pass
 
     def wait_for_connection(self):
+<<<<<<< HEAD
         while self.msg is None:
             nano_sleep(duration(seconds=0.1))
         nano_sleep(duration(seconds=0.1))
+=======
+        while not self.q:
+            nano_sleep(duration(seconds=0.1))
+        nano_sleep(duration(seconds=0.1))
+        logger.info(f"Sub for {self._topic} connected")
+>>>>>>> 36f58be (readme)

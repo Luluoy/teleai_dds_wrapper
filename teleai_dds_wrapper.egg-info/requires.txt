@@ -1,1 +1,7 @@
 cyclonedds==0.11.0
+<<<<<<< HEAD
+=======
+psutil
+numpy<2.0
+colorlog
+>>>>>>> 36f58be (readme)

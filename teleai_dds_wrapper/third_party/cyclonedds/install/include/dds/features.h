@@ -24,7 +24,11 @@
 #define DDS_HAS_NETWORK_PARTITIONS 1
 
 /* Whether or not features dependent on OpenSSL are included */
+<<<<<<< HEAD
 /* #undef DDS_HAS_TCP_TLS */
+=======
+#define DDS_HAS_TCP_TLS 1
+>>>>>>> 36f58be (readme)
 
 /* Whether or not support for type library is included */
 #define DDS_HAS_TYPELIB 1
