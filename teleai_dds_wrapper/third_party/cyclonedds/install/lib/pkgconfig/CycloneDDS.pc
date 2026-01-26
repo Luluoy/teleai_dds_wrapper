@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-prefix=/home/coder/code/dds_iox/teleai_dds_wrapper/teleai_dds_wrapper/third_party/cyclonedds/install
-=======
-prefix=/home/dx/loy/code/teleai_dds_wrapper/teleai_dds_wrapper/third_party/cyclonedds/install
->>>>>>> 36f58be (readme)
+prefix=/home/waylen/code/teleai_dds_wrapper/teleai_dds_wrapper/third_party/cyclonedds/install
 includedir=${prefix}/include
 libdir=${prefix}/lib
 

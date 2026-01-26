@@ -73,14 +73,14 @@ class uint_100d(idl.IdlStruct, typename="commonInfo.msg.dds_.uint_100d"):
 class process_state(idl.IdlStruct, typename="commonInfo.msg.dds_.process_state"):
     name: str
     annotate.key("name")
-    state: types.byte
+    state: types.int32
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_single_control_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_single_control_info"):
-    arm_joint_delta: 'commonInfo.msg.dds_.float_7d'
+    arm_joint_q: 'commonInfo.msg.dds_.float_7d'
     gripper_action: 'commonInfo.msg.dds_.uint_1d'
 
 
@@ -96,8 +96,8 @@ class roboticArm_single_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_control_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_control_info"):
-    left_arm_joint_delta: 'commonInfo.msg.dds_.float_7d'
-    right_arm_joint_delta: 'commonInfo.msg.dds_.float_7d'
+    left_arm_q: 'commonInfo.msg.dds_.float_7d'
+    right_arm_q: 'commonInfo.msg.dds_.float_7d'
     left_gripper_action: 'commonInfo.msg.dds_.uint_1d'
     right_gripper_action: 'commonInfo.msg.dds_.uint_1d'
 

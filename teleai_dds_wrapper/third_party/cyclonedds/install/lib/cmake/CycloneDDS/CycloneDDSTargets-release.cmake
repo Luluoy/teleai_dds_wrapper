@@ -35,8 +35,6 @@ set_target_properties(CycloneDDS::idl PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::idl )
 list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::idl "${_IMPORT_PREFIX}/lib/libcycloneddsidl.so.0.11.0" )
 
-<<<<<<< HEAD
-=======
 # Import target "CycloneDDS::dds_security_ac" for configuration "Release"
 set_property(TARGET CycloneDDS::dds_security_ac APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(CycloneDDS::dds_security_ac PROPERTIES
@@ -67,7 +65,6 @@ set_target_properties(CycloneDDS::dds_security_crypto PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::dds_security_crypto )
 list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::dds_security_crypto "${_IMPORT_PREFIX}/lib/libdds_security_crypto.so" )
 
->>>>>>> 36f58be (readme)
 # Import target "CycloneDDS::psmx_iox" for configuration "Release"
 set_property(TARGET CycloneDDS::psmx_iox APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(CycloneDDS::psmx_iox PROPERTIES

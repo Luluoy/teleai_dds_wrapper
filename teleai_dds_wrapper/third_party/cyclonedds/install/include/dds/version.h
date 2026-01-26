@@ -17,11 +17,7 @@
 #define DDS_VERSION_PATCH 0
 #define DDS_VERSION_TWEAK 
 #define DDS_PROJECT_NAME "CycloneDDS"
-<<<<<<< HEAD
-#define DDS_GIT_HASH  "8b34564"
-=======
-#define DDS_GIT_HASH  ""
->>>>>>> 36f58be (readme)
+#define DDS_GIT_HASH  "e94af8b"
 
 #define DDS_HOST_NAME "Linux"
 #define DDS_TARGET_NAME "Linux"

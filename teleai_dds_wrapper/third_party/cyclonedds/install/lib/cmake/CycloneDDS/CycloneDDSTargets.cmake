@@ -16,11 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-<<<<<<< HEAD
-foreach(_expectedTarget CycloneDDS::libidlc CycloneDDS::idlc CycloneDDS::idl CycloneDDS::psmx_iox CycloneDDS::ddsc)
-=======
 foreach(_expectedTarget CycloneDDS::libidlc CycloneDDS::idlc CycloneDDS::idl CycloneDDS::dds_security_ac CycloneDDS::dds_security_auth CycloneDDS::dds_security_crypto CycloneDDS::psmx_iox CycloneDDS::ddsc)
->>>>>>> 36f58be (readme)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -68,8 +64,6 @@ set_target_properties(CycloneDDS::idl PROPERTIES
   INTERFACE_LINK_LIBRARIES "CycloneDDS::ddsc"
 )
 
-<<<<<<< HEAD
-=======
 # Create imported target CycloneDDS::dds_security_ac
 add_library(CycloneDDS::dds_security_ac SHARED IMPORTED)
 
@@ -91,7 +85,6 @@ set_target_properties(CycloneDDS::dds_security_crypto PROPERTIES
   INTERFACE_LINK_LIBRARIES "CycloneDDS::ddsc;OpenSSL::SSL"
 )
 
->>>>>>> 36f58be (readme)
 # Create imported target CycloneDDS::psmx_iox
 add_library(CycloneDDS::psmx_iox SHARED IMPORTED)
 

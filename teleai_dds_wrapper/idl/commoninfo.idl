@@ -32,11 +32,11 @@ module commonInfo {
       @final
       struct process_state {
         @key string name;
-        octet state;
+        long state;
       };
       @final
       struct roboticArm_single_control_info {
-        float_7d arm_joint_delta;
+        float_7d arm_joint_q;
         uint_1d  gripper_action;
       };
       @final
@@ -46,8 +46,8 @@ module commonInfo {
       };
       @final
       struct roboticArm_double_control_info {
-        float_7d left_arm_joint_delta;
-        float_7d right_arm_joint_delta;
+        float_7d left_arm_q;
+        float_7d right_arm_q;
         uint_1d  left_gripper_action;
         uint_1d  right_gripper_action;
       };
