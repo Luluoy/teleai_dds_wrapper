@@ -1,0 +1,81 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyi
+*.so
+
+# Virtual environment
+venv/
+.env/
+.env.*.local
+
+# pip / build / dist
+build/
+dist/
+*.egg-info/
+.eggs/
+*.wheel
+
+# mypy / type check
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# =========================
+# VSCode
+# =========================
+.vscode/
+.history/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# System
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# DDS / ROS / IPC / SHM 临时文件
+# =========================
+*.sock
+*.ipc
+*.db   # SQLite temp DB
+*.pid
+*.tmp
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Optional: C/C++ build artifacts
+# =========================
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.a
+
+# =========================
+# Temporary / backup
+# =========================
+*.bak
+*~
