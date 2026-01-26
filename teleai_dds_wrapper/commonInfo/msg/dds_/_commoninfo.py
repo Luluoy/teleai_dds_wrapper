@@ -15,7 +15,7 @@ import cyclonedds.idl.annotations as annotate
 import cyclonedds.idl.types as types
 
 # root module import for resolving types
-import teleai_dds_wrapper.commonInfo
+import commonInfo
 
 
 @dataclass
@@ -80,51 +80,51 @@ class process_state(idl.IdlStruct, typename="commonInfo.msg.dds_.process_state")
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_single_control_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_single_control_info"):
-    arm_joint_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    gripper_action: 'teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d'
+    arm_joint_q: types.array[types.float32, 7]
+    gripper_action: types.byte
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_single_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_single_state_info"):
-    arm_joint_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    gripper_state: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    arm_joint_q: types.array[types.float32, 7]
+    gripper_state: types.float32
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_control_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_control_info"):
-    left_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    right_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    left_gripper_action: 'teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d'
-    right_gripper_action: 'teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d'
+    left_arm_q: types.array[types.float32, 7]
+    right_arm_q: types.array[types.float32, 7]
+    left_gripper_action: types.byte
+    right_gripper_action: types.byte
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_state_info"):
-    left_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    right_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    left_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
-    right_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    left_arm_q: types.array[types.float32, 7]
+    right_arm_q: types.array[types.float32, 7]
+    left_gripper: types.float32
+    right_gripper: types.float32
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class roboticArm_double_all_state_info(idl.IdlStruct, typename="commonInfo.msg.dds_.roboticArm_double_all_state_info"):
-    left_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    right_arm_q: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    left_arm_dq: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    right_arm_dq: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    left_arm_tau: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    right_arm_tau: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_7d'
-    left_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
-    right_gripper: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
-    left_gripper_vel: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
-    right_gripper_vel: 'teleai_dds_wrapper.commonInfo.msg.dds_.float_1d'
+    left_arm_q: types.array[types.float32, 7]
+    right_arm_q: types.array[types.float32, 7]
+    left_arm_dq: types.array[types.float32, 7]
+    right_arm_dq: types.array[types.float32, 7]
+    left_arm_tau: types.array[types.float32, 7]
+    right_arm_tau: types.array[types.float32, 7]
+    left_gripper: types.float32
+    right_gripper: types.float32
+    left_gripper_vel: types.float32
+    right_gripper_vel: types.float32
 
 

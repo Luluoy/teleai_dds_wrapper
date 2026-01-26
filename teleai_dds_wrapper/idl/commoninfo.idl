@@ -36,40 +36,40 @@ module commonInfo {
       };
       @final
       struct roboticArm_single_control_info {
-        float_7d arm_joint_q;
-        uint_1d  gripper_action;
+        float arm_joint_q[7];
+        octet  gripper_action;
       };
       @final
       struct roboticArm_single_state_info {
-        float_7d arm_joint_q;
-        float_1d  gripper_state;
+        float arm_joint_q[7];
+        float  gripper_state;
       };
       @final
       struct roboticArm_double_control_info {
-        float_7d left_arm_q;
-        float_7d right_arm_q;
-        uint_1d  left_gripper_action;
-        uint_1d  right_gripper_action;
+        float left_arm_q[7];
+        float right_arm_q[7];
+        octet  left_gripper_action;
+        octet  right_gripper_action;
       };
       @final
       struct roboticArm_double_state_info {
-        float_7d left_arm_q;
-        float_7d right_arm_q;
-        float_1d  left_gripper;
-        float_1d  right_gripper;
+        float left_arm_q[7];
+        float right_arm_q[7];
+        float  left_gripper;
+        float  right_gripper;
       };
       @final
       struct roboticArm_double_all_state_info {
-        float_7d left_arm_q;
-        float_7d right_arm_q;
-        float_7d left_arm_dq;
-        float_7d right_arm_dq;
-        float_7d left_arm_tau;
-        float_7d right_arm_tau;
-        float_1d  left_gripper;
-        float_1d  right_gripper;
-        float_1d  left_gripper_vel;
-        float_1d  right_gripper_vel;
+        float left_arm_q[7];
+        float right_arm_q[7];
+        float left_arm_dq[7];
+        float right_arm_dq[7];
+        float left_arm_tau[7];
+        float right_arm_tau[7];
+        float  left_gripper;
+        float  right_gripper;
+        float  left_gripper_vel;
+        float  right_gripper_vel;
       };
     };
   };
