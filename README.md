@@ -75,13 +75,19 @@
 
 ## 安装验证
 
-可以通过运行以下脚本来验证安装是否成功：
+手头有realsense相机的时候，可以通过运行以下脚本来验证安装是否成功：
 
 ```bash
-python verify_all_types.py
+python py_pub_realsense.py
+```
+
+```bash
+python py_sub_realsense.py
 ```
 
 若脚本能够正常运行并输出预期结果，说明 DDS 与 SHM 的 Python 接口已正确配置。
+如果图像卡顿，考虑有可能是iceoryx没有正确配置。
+你也可以将上述代码视为一个简单的例程，参考他们来进行dds的开发。
 
 ---
 
