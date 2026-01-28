@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teleai_dds_wrapper"
+version = "0.1.0"
+description = "A custom wrapper for CycloneDDS and Iceoryx"
+requires-python = ">=3.10"
+dependencies = [
+    "cyclonedds==0.11.0",
+    "psutil",
+    "numpy<2.0",
+    "pyrealsense2==2.54.1.5216",
+    "colorlog"
+]
+
+[tool.setuptools]
+packages = ["teleai_dds_wrapper"]
+
+[tool.setuptools.package-data]
+"teleai_dds_wrapper" = ["*.xml", "*.toml"]

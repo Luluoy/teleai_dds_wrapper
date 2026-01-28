@@ -1,0 +1,82 @@
+module commonInfo {
+  module msg {
+    module dds_ {
+      @final
+      struct commonCamera_224 {
+        octet image[150528];
+      };
+      @final
+      struct commonCamera_640480 {
+        octet image[921600];
+      };
+      @final
+      struct float_7d {
+        float data[7];
+      };
+      @final
+      struct uint_7d {
+        float data[7];
+      };
+      @final
+      struct uint_1d {
+        octet data;
+      };
+      @final
+      struct float_1d {
+        float data;
+      };
+      @final
+      struct uint_100d {
+        octet data[100];
+      };
+      @final
+      struct process_state {
+        @key string name;
+        long state;
+      };
+      @final
+      struct roboticArm_single_control_info {
+        float arm_joint_q[7];
+        octet  gripper_action;
+      };
+      @final
+      struct roboticArm_single_state_info {
+        float arm_joint_q[7];
+        float  gripper_state;
+      };
+      @final
+      struct roboticArm_double_control_info {
+        float left_arm_q[7];
+        float right_arm_q[7];
+        octet left_gripper_action;
+        octet right_gripper_action;
+      };
+      @final
+      struct roboticArm_double_state_info {
+        float left_arm_q[7];
+        float right_arm_q[7];
+        float  left_gripper;
+        float  right_gripper;
+      };
+      @final
+      struct roboticArm_double_all_state_info {
+        float left_arm_q[7];
+        float right_arm_q[7];
+        float left_arm_dq[7];
+        float right_arm_dq[7];
+        float left_arm_tau[7];
+        float right_arm_tau[7];
+        float  left_gripper;
+        float  right_gripper;
+        float  left_gripper_vel;
+        float  right_gripper_vel;
+      };
+      @final
+      struct vla_inference_result_single {
+        long long inference_start_nanosec;
+        float result[160];
+        long fps;
+      };
+    };
+  };
+};
