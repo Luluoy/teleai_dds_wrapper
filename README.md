@@ -106,3 +106,15 @@ python py_sub_realsense.py
 也非常欢迎一同交流、使用与改进这套基础设施。
 
 > 若有问题、建议或改进想法，欢迎提出 Issue 或 Pull Request。
+
+## Acknowledgements
+
+This project makes use of the following open-source software:
+
+- CycloneDDS, © Eclipse Foundation  
+- Eclipse Iceoryx, © Eclipse Foundation
+
+This repository provides a Python-level wrapper and integration only.
+No modifications are made to the original implementations of the above projects.
+
+All trademarks and copyrights belong to their respective owners.
