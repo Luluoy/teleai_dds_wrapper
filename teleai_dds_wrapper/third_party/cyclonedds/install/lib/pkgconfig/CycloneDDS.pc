@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 prefix=/home/dx/loy/code/teleai_dds_wrapper/teleai_dds_wrapper/third_party/cyclonedds/install
+=======
+prefix=/home/waylen/code/teleai_dds_wrapper/teleai_dds_wrapper/third_party/cyclonedds/install
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 includedir=${prefix}/include
 libdir=${prefix}/lib
 

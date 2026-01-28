@@ -19,11 +19,19 @@ module commonInfo {
       };
       @final
       struct uint_1d {
+<<<<<<< HEAD
         octet data;
       };
       @final
       struct float_1d {
         float data;
+=======
+        octet data[1];
+      };
+      @final
+      struct float_1d {
+        float data[1];
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
       };
       @final
       struct uint_100d {
@@ -48,8 +56,13 @@ module commonInfo {
       struct roboticArm_double_control_info {
         float left_arm_q[7];
         float right_arm_q[7];
+<<<<<<< HEAD
         octet left_gripper_action;
         octet right_gripper_action;
+=======
+        octet  left_gripper_action;
+        octet  right_gripper_action;
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
       };
       @final
       struct roboticArm_double_state_info {
@@ -71,12 +84,15 @@ module commonInfo {
         float  left_gripper_vel;
         float  right_gripper_vel;
       };
+<<<<<<< HEAD
       @final
       struct vla_inference_result_single {
         long long inference_start_nanosec;
         float result[160];
         long fps;
       };
+=======
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
     };
   };
 };

@@ -33,7 +33,10 @@
 #  define LIBIDLC_DEPRECATED_NO_EXPORT LIBIDLC_NO_EXPORT LIBIDLC_DEPRECATED
 #endif
 
+<<<<<<< HEAD
 /* NOLINTNEXTLINE(readability-avoid-unconditional-preprocessor-if) */
+=======
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 #if 0 /* DEFINE_NO_DEPRECATED */
 #  ifndef LIBIDLC_NO_DEPRECATED
 #    define LIBIDLC_NO_DEPRECATED

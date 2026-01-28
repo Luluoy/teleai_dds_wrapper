@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 .venv
 output/
 manual/ddsc_api_docs/
+=======
+.venv
+output/
+manual/ddsc_api_docs/
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 manual/doxygen.conf

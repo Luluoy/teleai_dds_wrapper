@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "project": "Eclipse Cyclone DDS",
     "project-short": "Cyclone DDS",
@@ -6,3 +7,13 @@
     "version": "0.11.0",
     "release": "0.11.0"
 }
+=======
+{
+    "project": "Eclipse Cyclone DDS",
+    "project-short": "Cyclone DDS",
+    "copyright": ":year:, Eclipse Cyclone DDS committers",
+    "author": "Eclipse Cyclone DDS committers",
+    "version": "0.11.0",
+    "release": "0.11.0"
+}
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5

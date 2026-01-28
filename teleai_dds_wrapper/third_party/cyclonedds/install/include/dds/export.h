@@ -33,7 +33,10 @@
 #  define DDS_DEPRECATED_NO_EXPORT DDS_NO_EXPORT DDS_DEPRECATED
 #endif
 
+<<<<<<< HEAD
 /* NOLINTNEXTLINE(readability-avoid-unconditional-preprocessor-if) */
+=======
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 #if 0 /* DEFINE_NO_DEPRECATED */
 #  ifndef DDS_NO_DEPRECATED
 #    define DDS_NO_DEPRECATED

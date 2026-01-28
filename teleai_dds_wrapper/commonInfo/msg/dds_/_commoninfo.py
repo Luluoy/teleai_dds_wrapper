@@ -50,14 +50,22 @@ class uint_7d(idl.IdlStruct, typename="teleai_dds_wrapper.commonInfo.msg.dds_.ui
 @annotate.final
 @annotate.autoid("sequential")
 class uint_1d(idl.IdlStruct, typename="teleai_dds_wrapper.commonInfo.msg.dds_.uint_1d"):
+<<<<<<< HEAD
     data: types.byte
+=======
+    data: types.array[types.byte, 1]
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
 class float_1d(idl.IdlStruct, typename="teleai_dds_wrapper.commonInfo.msg.dds_.float_1d"):
+<<<<<<< HEAD
     data: types.float32
+=======
+    data: types.array[types.float32, 1]
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 
 @dataclass
@@ -128,6 +136,7 @@ class roboticArm_double_all_state_info(idl.IdlStruct, typename="teleai_dds_wrapp
     right_gripper_vel: types.float32
 
 
+<<<<<<< HEAD
 @dataclass
 @annotate.final
 @annotate.autoid("sequential")
@@ -137,3 +146,5 @@ class vla_inference_result_single(idl.IdlStruct, typename="teleai_dds_wrapper.co
     fps: types.int32
 
 
+=======
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5

@@ -13,8 +13,13 @@ set_target_properties(CycloneDDS::libidlc PROPERTIES
   IMPORTED_SONAME_RELEASE "libcycloneddsidlc.so.0"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::libidlc )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::libidlc "${_IMPORT_PREFIX}/lib/libcycloneddsidlc.so.0.11.0" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::libidlc )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::libidlc "${_IMPORT_PREFIX}/lib/libcycloneddsidlc.so.0.11.0" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::idlc" for configuration "Release"
 set_property(TARGET CycloneDDS::idlc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -22,8 +27,13 @@ set_target_properties(CycloneDDS::idlc PROPERTIES
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/idlc"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::idlc )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::idlc "${_IMPORT_PREFIX}/bin/idlc" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::idlc )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::idlc "${_IMPORT_PREFIX}/bin/idlc" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::idl" for configuration "Release"
 set_property(TARGET CycloneDDS::idl APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -32,8 +42,13 @@ set_target_properties(CycloneDDS::idl PROPERTIES
   IMPORTED_SONAME_RELEASE "libcycloneddsidl.so.0"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::idl )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::idl "${_IMPORT_PREFIX}/lib/libcycloneddsidl.so.0.11.0" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::idl )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::idl "${_IMPORT_PREFIX}/lib/libcycloneddsidl.so.0.11.0" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::dds_security_ac" for configuration "Release"
 set_property(TARGET CycloneDDS::dds_security_ac APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -42,8 +57,13 @@ set_target_properties(CycloneDDS::dds_security_ac PROPERTIES
   IMPORTED_SONAME_RELEASE "libdds_security_ac.so"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::dds_security_ac )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::dds_security_ac "${_IMPORT_PREFIX}/lib/libdds_security_ac.so" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::dds_security_ac )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::dds_security_ac "${_IMPORT_PREFIX}/lib/libdds_security_ac.so" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::dds_security_auth" for configuration "Release"
 set_property(TARGET CycloneDDS::dds_security_auth APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -52,8 +72,13 @@ set_target_properties(CycloneDDS::dds_security_auth PROPERTIES
   IMPORTED_SONAME_RELEASE "libdds_security_auth.so"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::dds_security_auth )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::dds_security_auth "${_IMPORT_PREFIX}/lib/libdds_security_auth.so" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::dds_security_auth )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::dds_security_auth "${_IMPORT_PREFIX}/lib/libdds_security_auth.so" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::dds_security_crypto" for configuration "Release"
 set_property(TARGET CycloneDDS::dds_security_crypto APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -62,8 +87,13 @@ set_target_properties(CycloneDDS::dds_security_crypto PROPERTIES
   IMPORTED_SONAME_RELEASE "libdds_security_crypto.so"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::dds_security_crypto )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::dds_security_crypto "${_IMPORT_PREFIX}/lib/libdds_security_crypto.so" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::dds_security_crypto )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::dds_security_crypto "${_IMPORT_PREFIX}/lib/libdds_security_crypto.so" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::psmx_iox" for configuration "Release"
 set_property(TARGET CycloneDDS::psmx_iox APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -73,8 +103,13 @@ set_target_properties(CycloneDDS::psmx_iox PROPERTIES
   IMPORTED_SONAME_RELEASE "libpsmx_iox.so.0.11.0"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::psmx_iox )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::psmx_iox "${_IMPORT_PREFIX}/lib/libpsmx_iox.so.0.11.0" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::psmx_iox )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::psmx_iox "${_IMPORT_PREFIX}/lib/libpsmx_iox.so.0.11.0" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Import target "CycloneDDS::ddsc" for configuration "Release"
 set_property(TARGET CycloneDDS::ddsc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -83,8 +118,13 @@ set_target_properties(CycloneDDS::ddsc PROPERTIES
   IMPORTED_SONAME_RELEASE "libddsc.so.0"
   )
 
+<<<<<<< HEAD
 list(APPEND _cmake_import_check_targets CycloneDDS::ddsc )
 list(APPEND _cmake_import_check_files_for_CycloneDDS::ddsc "${_IMPORT_PREFIX}/lib/libddsc.so.0.11.0" )
+=======
+list(APPEND _IMPORT_CHECK_TARGETS CycloneDDS::ddsc )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CycloneDDS::ddsc "${_IMPORT_PREFIX}/lib/libddsc.so.0.11.0" )
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

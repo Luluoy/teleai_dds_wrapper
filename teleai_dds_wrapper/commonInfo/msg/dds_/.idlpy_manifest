@@ -13,4 +13,7 @@ roboticArm_single_state_info
 uint_100d
 uint_1d
 uint_7d
+<<<<<<< HEAD
 vla_inference_result_single
+=======
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5

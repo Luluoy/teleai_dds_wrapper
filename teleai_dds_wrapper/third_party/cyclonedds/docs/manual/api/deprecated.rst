@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Deprecated functionality
 ========================
 
@@ -7,3 +8,14 @@ All functionality in this section is considered deprecated. They will generate w
     :project: ddsc_api_docs
     :members:
 
+=======
+Deprecated functionality
+========================
+
+All functionality in this section is considered deprecated. They will generate warnings and could be removed in a major release.
+
+.. doxygengroup:: deprecated
+    :project: ddsc_api_docs
+    :members:
+
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5

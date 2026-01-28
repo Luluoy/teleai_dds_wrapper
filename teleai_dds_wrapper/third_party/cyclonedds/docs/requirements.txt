@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 Sphinx>=4
 breathe>=4
 piccolo-theme>=0
 sphinx-tabs>=3.4
+=======
+Sphinx>=4
+breathe>=4
+piccolo-theme>=0
+sphinx-tabs>=3.4
+>>>>>>> 108331cb209446b50bffabd3b33bc2514f118bb5
